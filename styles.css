@@ -1,0 +1,87 @@
+/* General Reset and Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: plum; /* Default background color */
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32); /* 3D effect */
+}
+
+/* Navigation Bar Links */
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    text-align: center;
+}
+
+#navbar ul li a:hover {
+    background-color: rgb(201, 118, 201);
+    color: #fff;
+}
+
+/* Navigation Menu for Larger Screens */
+.nav-menu {
+    position: fixed;
+    top: 50px; /* Adjust according to the height of the #navbar */
+    width: 100%;
+    background-color: rgba(68, 68, 68, 0.8); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 999; /* Ensures it's below #navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.32); /* Optional: for consistency with #navbar */
+    backdrop-filter: blur(8px); /* Apply blur effect to background */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Navigation Menu Links */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.nav-menu a:hover {
+    background-color: rgb(201, 118, 201);
+    color: #fff;
+}
+
+/* Content Margin */
+.content {
+    margin-top: 60px; /* Adjust based on the combined height of #navbar and .nav-menu */
+    padding: 20px;
+}
+
+/* Scrolled State for Navbar */
+#navbar.scrolled {
+    background-color: rgb(148, 48, 148);/* Darker background color when scrolled */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow when scrolled */
+}
